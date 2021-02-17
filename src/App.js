@@ -1,14 +1,24 @@
 import './App.css';
-import Items from './Items'
+import Items from './Items';
+import { Jumbotron, Container } from "reactstrap";
+
 // import { products } from './data.json'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Shoply</h1>
-      </header>
-      <Items />
+    <div>
+      <Jumbotron fluid>
+        <Container fluid>
+          <h1 className="display-3">Shoply</h1>
+          <p className="lead">
+            This is a modified jumbotron that occupies the entire horizontal
+            space of its parent.
+          </p>
+        </Container>
+      </Jumbotron>
+      <div>
+        <Items/>
+      </div>
     </div>
   );
 }

@@ -7,8 +7,6 @@ function Items() {
   const { products } = useSelector((st) => st);
   const dispatch = useDispatch();
 
-	// console.log(products)
-
   const productList = Object.keys(products).map(
     (id) => (
       console.log(products[id].name),
