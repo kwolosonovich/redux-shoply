@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { addItem, removeItem } from "./actions"; 
 import {
   MDBBtn,
   MDBCard,
@@ -17,8 +18,8 @@ function Items() {
   const { products } = useSelector((st) => st);
   const dispatch = useDispatch();
 
-  const add = () => dispatch(addToCart(id));
-  const remove = () => dispatch(removeFromCart(id));
+  const add = () => dispatch(addItem(id));
+  const remove = () => dispatch(removeItem(id));
 
   const productList = Object.keys(products).map(
     (id) => (
@@ -38,12 +39,14 @@ function Items() {
               tag="a"
               className="ml-auto mr-4 lighten-3"
               action
+              onClick="add"
             >Add</MDBBtn>
             <MDBBtn
               floating
               tag="a"
               className="ml-auto mr-4 lighten-3 mdb-coalor"
               action
+              onClick="remove"
             >Remove</MDBBtn>
             <MDBCardBody cascade>
               <MDBCardTitle>{products[id].name}</MDBCardTitle>

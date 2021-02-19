@@ -1,15 +1,15 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./actionTypes";
+import { ADD_ITEM, REMOVE_ITEM } from "./actionTypes";
 
-export function addToCart(id) {
+export function addItem(id) {
   return {
-    type: ADD_TO_CART,
+    type: ADD_ITEM,
     id,
   };
 }
 
-export function removeFromCart(id) {
+export function removeItem(id) {
   return {
-    type: REMOVE_FROM_CART,
+    type: REMOVE_ITEM,
     id,
   };
 }
