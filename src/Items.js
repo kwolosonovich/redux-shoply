@@ -17,6 +17,9 @@ function Items() {
   const { products } = useSelector((st) => st);
   const dispatch = useDispatch();
 
+  const add = () => dispatch(addToCart(id));
+  const remove = () => dispatch(removeFromCart(id));
+
   const productList = Object.keys(products).map(
     (id) => (
       console.log(products[id].name),
