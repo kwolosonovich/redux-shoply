@@ -12,8 +12,6 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdbreact";
-import Item from "./Item"
-import './Items.css'
 
 function Items() {
   const { products } = useSelector((st) => st);
